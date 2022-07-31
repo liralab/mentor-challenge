@@ -8,24 +8,24 @@ const numberValue = document.querySelectorAll(".numbers");
 const outputText = document.querySelector(".result-text-display");
 let number = '';
 
-for (let a=0; a < numberValue.length; a++) {
+numberValue.forEach(function(e) {
   submitButton.setAttribute("disabled","true")
 
-  numberValue[a].addEventListener('focus',(e)=> {
+  e.addEventListener('focus',function() {
     numberValue.forEach((x) => x.classList.remove("selected"));
 
-    numberValue[a].classList.toggle('selected');
+    e.classList.add('selected');
     submitButton.removeAttribute("disabled")
 
     if (number==''){
-    number += numberValue[a].textContent;
+    number += e.textContent;
     console.log(number);
     } else {
       number='';
-      number += numberValue[a].textContent;
+      number += e.textContent;
     }
   });
-}
+})
 
 submitButton.addEventListener('focus',function() {
   ratingArea.style.display = "none";
