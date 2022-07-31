@@ -1,10 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      align-items: center;
+    }
+
+    .rating-box {
+      background: rgb(25,32,46);
+      background: linear-gradient(180deg, rgba(25,32,46,1) 0%, rgba(63,75,87,1) 66%, rgba(61,78,85,1) 100%);
+      width: 35%;
+      margin: 0 auto;
+      padding: 2rem;
+      color: white;
+      box-sizing: border-box;
+    }
+
+    .star-box {
+      padding: 1rem;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(0, 13, 41, 0.35);
+    }
+
+    .text-box .title {
+      color: white;
+      font-size: 24px;
+      margin-top: 1.6rem;
+    }
+
+    .text-box .content p {
+      font-size: 1rem;
+      color: #b6b6b6;
+    }
+
+    .number-box {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .number {
+      width: 35px;
+      height: 35px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 13, 41, 0.35);
+      border-radius: 50%;
+    }
+
+    input[type="button"] {
+      background:none;
+      border: none;
+      color: #6b6b6b;
+      font-size: 1.2rem;
+    }
+
+    .rate-submit {
+      background-color: darkorange;
+      color: white;
+      font-size: 1.4rem;
+      border-radius: 12px;
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      margin-top: 1.5rem;
+    }
+
+    .review-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .review-select p{
+        color: #c6c6c6;
+        text-align: center;
+    }
+
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div class="rating-box" id="ratingBox">
+      <div class="star-box">
+        <img src="./images/icon-star.svg" alt="star">
+      </div>
+      <div class="text-box">
+        <div class="title">How did we do?</div>
+        <div class="content">
+          <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        </div>
+      </div>
+      <form class="rating-form" id="rating-form">
+        <div class="number-box">
+          <span class="number">
+           <input type="button" value="1" class="number-button" data-activate="false">
+         </span>
+          <span class="number">
+            <input type="button" value="2" class="number-button" data-activate="false">
+          </span>
+          <span class="number">
+            <input type="button" value="3" class="number-button" data-activate="false">
+          </span>
+          <span class="number">
+            <input type="button" value="4" class="number-button" data-activate="false">
+          </span>
+          <span class="number">
+            <input type="button" value="5" class="number-button" data-activate="false">
+          </span>
+        </div>
+        <button type="submit" class="rate-submit">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ardaninsaturnu</a>.
+  </div>
+  <script>
+      const numberButton = document.querySelectorAll('.number-button');
+      const numberForm = document.querySelector('#rating-form');
 
+      numberButton.forEach(item => {
+          item.addEventListener('click', e => {
+              numberButton.forEach(item => {
+                  item.parentElement.style.background = 'rgba(0, 13, 41, 0.35)';
+                  item.style.color = '#6b6b6b';
+                  item.setAttribute('data-activate','false')
+              })
+              item.parentElement.style.backgroundColor = 'darkorange';
+              item.style.color = 'white';
+              item.setAttribute('data-activate','true');
+          })
+      })
+
+      numberForm.addEventListener('submit', function(e){
+          e.preventDefault();
+          let selectedItem;
+          numberButton.forEach( item => {
+              if(item.getAttribute('data-activate') === 'true')
+                  selectedItem = item;
+
+          });
+          console.log(selectedItem.value);
+
+          const review = `
+            <div class="review-img"><img src="images/illustration-thank-you.svg" alt="thank you"/></div>
+            <div class="review-select"><p>You selected ${selectedItem.value} out of 5</p></div>
+            <div class="review-content text-box">
+                <div class="title">Thank You !</div>
+                <div class="content">
+                    <p>
+                        We appreciate you taking the time to give a rating.
+                        If you ever need more support, don't hesitate to get in touch
+                    </p>
+                </div>
+            </div>`
+
+          document.querySelector('#ratingBox').innerHTML = review;
+      });
+
+  </script>
 </body>
 </html>
