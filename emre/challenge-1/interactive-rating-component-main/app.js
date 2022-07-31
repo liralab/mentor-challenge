@@ -10,9 +10,11 @@ if(item > 0){
         })
     } 
 }
+
 let starPoint;
 let count = 0;
 const btn = document.querySelectorAll('.btn')
+
 btn.forEach(function(e){  
 e.addEventListener('click',function(c){ 
     let className = c.currentTarget.classList
