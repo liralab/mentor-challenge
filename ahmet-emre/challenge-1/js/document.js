@@ -10,10 +10,13 @@ let number = '';
 
 for (let a=0; a < numberValue.length; a++) {
   submitButton.setAttribute("disabled","true")
+
   numberValue[a].addEventListener('focus',(e)=> {
     numberValue.forEach((x) => x.classList.remove("selected"));
+
     numberValue[a].classList.toggle('selected');
     submitButton.removeAttribute("disabled")
+
     if (number==''){
     number += numberValue[a].textContent;
     console.log(number);

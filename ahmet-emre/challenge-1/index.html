@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Roboto+Condensed:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
   <title>Emre's Design | Interactive rating component</title>
-  <script src="app.js"></script>
+  <script defer src="js/document.js"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
@@ -65,39 +65,3 @@
   </div>
 </body>
 </html>
-
-<script>
-const ratingArea = document.querySelector(".rating-box-wrapper");
-const resultArea = document.querySelector(".rating-result-wrapper");
-const submitButton = document.querySelector(".rating-submit-input");
-const numberValue = document.querySelectorAll(".numbers");
-const outputText = document.querySelector(".result-text-display");
-let number = '';
-
-for (let a=0; a<numberValue.length; a++) {
-  submitButton.setAttribute("disabled","true")
-
-  numberValue[a].addEventListener('focus',(e)=> {
-
-    numberValue.forEach((x) => x.classList.remove("selected"));
-    numberValue[a].classList.toggle('selected');
-    submitButton.removeAttribute("disabled")
-
-    if (number==''){
-    number += numberValue[a].textContent;
-    console.log(number);
-    } else {
-      number='';
-      number += numberValue[a].textContent;
-    }
-    
-  });
-}
-
-submitButton.addEventListener('focus',function() {
-  ratingArea.style.display = "none";
-  resultArea.style.display = "block";
-  outputText.textContent ='You selected ' + number + ' out of 5'
-});
-
-</script>

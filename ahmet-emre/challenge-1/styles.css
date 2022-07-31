@@ -15,9 +15,11 @@ body{
   color: hsl(25, 97%, 53%) ;
   font-size: 12px;
   transition: all .2s ease-in-out;
+  line-height: 18px;
 }
 .attribution a:hover {
   color: lightblue;
+  transform: scale(1.1);
 }
 .rating-container{
   font-family: 'Overpass', sans-serif ;
@@ -94,10 +96,11 @@ body{
   text-decoration: none;
   color: hsl(217, 12%, 63%);
   border:none;
+  transition: all .2s ease-in-out;
 }
 .numbers:hover{
   filter: brightness(200%);
-  scale:(1.5);
+  transform: scale(1.03);
 }
 .selected {
   color:white;
@@ -136,10 +139,12 @@ body{
   cursor: default;
   color: white;
   background-color: hsl(25, 97%, 53%);
+  transform: scale(1);
 }
 .rating-submit-input:hover {
   color: hsl(25, 97%, 53%);
   background-color: white;
+  transform: scale(1.03);
 }
 /* -------------------- Result area start -------------------- */
 .result-image-area{
