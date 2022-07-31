@@ -11,7 +11,8 @@ let number = '';
 numberValue.forEach(function(e) {
   submitButton.setAttribute("disabled","true")
 
-  e.addEventListener('focus',function() {
+  e.addEventListener('click',function(eae) {
+    eae.preventDefault();
     numberValue.forEach((x) => x.classList.remove("selected"));
 
     e.classList.add('selected');
