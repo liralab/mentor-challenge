@@ -173,6 +173,9 @@ body {
   }
 }
 @media (max-width:768px){
+  body{
+    height: 100vh;
+  }
   .coming-soon-wrapper{
     flex-direction: column-reverse;
   }
@@ -186,11 +189,12 @@ body {
   }
   .coming-soon-left-side-wrapper{
     width: 100%;
+    height: 500px;
     min-height: auto;
   }
   .coming-soon-right-side-wrapper{
     width: 100%;
-    height: 250px;
+    height: 450px;
     min-height: auto;
     background-image: url("../images/hero-mobile.jpg");
   }
@@ -235,5 +239,13 @@ body {
   }
   .coming-soon-error-text{
     left: 15px;
+  }
+}
+@media (max-width:568px){
+  .coming-soon-right-side-wrapper{
+    width: 100%;
+    height: 300px;
+    min-height: auto;
+    background-image: url("../images/hero-mobile.jpg");
   }
 }
