@@ -1,0 +1,239 @@
+body {
+  font-family: 'Josefin Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin:0 !important;
+}
+.coming-soon-container{
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.attribution {
+  position: absolute;
+  bottom:10px;
+  left: 40px;
+  font-size: 11px;
+  text-align: center;
+  color:hsl(0, 36%, 75%);
+  z-index: 1;
+  white-space: nowrap;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(0, 93%, 68%);
+  font-size: 12px;
+  transition: all .2s ease-in-out;
+  line-height: 18px;
+}
+.attribution a:hover {
+  font-size:13px;
+  color: hsl(0, 93%, 30%);
+}
+.coming-soon-wrapper{
+  display: flex;
+}
+.icon-mobile{
+  display: none;
+}
+.coming-soon-left-side-wrapper{
+  width: 60%;
+  min-height: 100vh;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.coming-soon-right-side-wrapper{
+  width: 40%;
+  min-height: 100vh;
+  background-image: url("../images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.coming-soon-input-area{
+  width: auto;
+}
+.coming-soon-left-side{
+  padding: 60px 220px;
+}
+.coming-soon-icon{
+  margin-bottom: 70px;
+}
+.coming-soon-header{
+  font-size: 64px;
+  line-height: 68px;
+  font-weight: 600;
+  color: hsl(0, 6%, 24%);
+  margin-bottom: 30px;
+}
+.header-gradient{
+  background-image: linear-gradient(180deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+.coming-soon-text{
+  font-size: 18px;
+  line-height: 30px;
+  color: hsl(0, 36%, 70%);
+  margin-bottom: 30px;
+}
+.input-wrapper{
+  position: relative;
+}
+.input-submit-wrapper{
+  position: absolute;
+  left:340px;
+  top: 0;
+}
+.coming-soon-error-icon{
+  position: absolute;
+  left: 310px;
+  top: 18px;
+  display: none;
+}
+.coming-soon-error-text{
+  position: absolute;
+  font-size: 14px;
+  color: hsl(0, 93%, 68%);
+  left: 15px;
+  display: none;
+  bottom:-22px;
+  white-space: nowrap;
+}
+.email-input{
+  padding: 20px 80px 20px 20px;
+  background-color: transparent;
+  border-radius: 35px;
+  border: 1px solid hsl(0, 36%, 70%);
+  width:300px;
+}
+.submit-input{
+  padding: 18px 40px 18px 40px;
+  border-radius: 30px;
+  background-image: linear-gradient(180deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border:none;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 20%) 0px 20px 30px;
+  transition: all .2s ease-in-out;
+}
+.email-input::placeholder{
+  color: hsl(0, 36%, 70%);
+  font-size: 16px;
+  font-weight: 300;
+  opacity: .6;
+}
+.email-input:focus{
+  outline: none !important;
+  border:1px solid hsl(0, 36%, 50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.email-input:focus::placeholder{
+  color: transparent;
+}
+.submit-input:hover{
+  transform: scale(1.03);
+  background-image: linear-gradient(180deg, hsl(0, 80%, 94%), hsl(0, 74%, 78%));
+}
+.activer{
+  display: block;
+}
+.disabler{
+  display: none;
+}
+.color-changer{
+  border:2px solid red !important;
+}
+@media (max-width:1530px){
+  .email-input{
+    padding: 20px 80px 20px 25px;
+    min-width: 270px ;
+  }
+}
+@media (max-width:1380px){
+  .coming-soon-left-side{
+    padding: 60px 100px;
+  }
+  .email-input{
+    padding: 20px 100px 20px 25px;
+    min-width: 250px ;
+  }
+  .submit-input{
+    padding: 18px 40px 18px 40px;
+    margin-right: 20px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 20px 30px;
+    transition: all .2s ease-in-out;
+  }
+}
+@media (max-width:975px){
+  .coming-soon-left-side{
+    padding: 60px 20px;
+  }
+}
+@media (max-width:768px){
+  .coming-soon-wrapper{
+    flex-direction: column-reverse;
+  }
+  .icon-mobile{
+    display: block !important;
+    padding:15px;
+    margin-bottom: 0;
+  }
+  .coming-soon-icon{
+    display: none;
+  }
+  .coming-soon-left-side-wrapper{
+    width: 100%;
+    min-height: auto;
+  }
+  .coming-soon-right-side-wrapper{
+    width: 100%;
+    height: 250px;
+    min-height: auto;
+    background-image: url("../images/hero-mobile.jpg");
+  }
+  .attribution {
+    position: static;
+    background-color: #FFF7F7;
+  }
+  .coming-soon-header{
+    font-size: 44px;
+    line-height: 48px;
+    text-align: center;
+  }
+  .coming-soon-text{
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    padding:0 30px 0;
+  }
+  .input-wrapper{
+    width: min-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .input-area-fm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #email{
+    width: 180px !important;
+    padding: 20px 10px 20px 25px;
+  }
+  .submit-input{
+    padding: 18px 28px 18px 28px;
+  }
+  .input-submit-wrapper{
+    left:235px;
+  }
+  .coming-soon-error-icon{
+    left: -30px;
+  }
+  .coming-soon-error-text{
+    left: 15px;
+  }
+}
