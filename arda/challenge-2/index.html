@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      padding: 0;
+      margin:0;
+      background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+      min-height: 100vh;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .faq-box {
+      width: 50%;
+      min-height: 400px;
+      background-color: white;
+      border-radius: 12px;
+      display: flex;
+      padding: 2rem;
+    }
+
+    .faq-image-box {
+      position: relative;
+      width: 50%;
+      padding: 3rem 0;
+    }
+
+
+    .faq-content-box {
+      width: 50%;
+      padding: 1rem;
+
+    }
+
+    .faq-image-box .woman {
+      position: absolute;
+      top: 50%;  /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+      transform: translate(-65%, -50%);
+    }
+
+    .faq-image-box .box {
+      position: absolute;
+      top: 60%;
+      left: 20%;
+      transform: translate(-100%, -50%);
+      z-index: 5;
+    }
+
+    .faq-content-box .faq-dropdown-wrapper {
+      border-bottom: 1px solid #b6b6b6;
+    }
+
+    .faq-dropdown-wrapper .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-dropdown-wrapper .d-none {
+      display: none;
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="faq-box">
+      <div class="faq-image-box">
+        <img class="box" src="images/illustration-box-desktop.svg"/>
+        <img class="woman" src="images/illustration-woman-online-desktop.svg"/>
+      </div>
+      <div class="faq-content-box">
+        <h1>FAQ</h1>
+        <div class="dropdown-container">
+          <div class="faq-dropdown-wrapper" id="wrapper">
+          </div>
+          <!--
+            <div class="faq-dropdown-wrapper">
+                <div class="faq-question" id="question"></div>
+                <div class="faq-content" id="content"></div>
+            </div>
+            -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ardaninsaturnu</a>.
+  </div>
+
+  <script>
+    const faqData = [
+      {
+        question: 'How many team member can ı invite ?',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam assumenda consequuntur cumque doloribus ea expedita illo impedit iste iusto maxime, modi nam nemo omnis porro sint tenetur voluptas voluptate?'
+      },
+      {
+        question: 'How many team member can ı invite ?',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam assumenda consequuntur cumque doloribus ea expedita illo impedit iste iusto maxime, modi nam nemo omnis porro sint tenetur voluptas voluptate?'
+      },
+      {
+        question: 'How many team member can ı invite ?',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam assumenda consequuntur cumque doloribus ea expedita illo impedit iste iusto maxime, modi nam nemo omnis porro sint tenetur voluptas voluptate?'
+      },
+      {
+        question: 'How many team member can ı invite ?',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam assumenda consequuntur cumque doloribus ea expedita illo impedit iste iusto maxime, modi nam nemo omnis porro sint tenetur voluptas voluptate?'
+      },
+      {
+        question: 'How many team member can ı invite ?',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam assumenda consequuntur cumque doloribus ea expedita illo impedit iste iusto maxime, modi nam nemo omnis porro sint tenetur voluptas voluptate?'
+      }
+    ]
+
+    const wrapper = document.querySelector('#wrapper');
+    const faqHtml = faqData.map( (item,index) => {
+      return `
+        <div class="faq-dropdown-wrapper">
+            <div class="faq-question" id="question-${index + 1}">${item.question}<img src="images/icon-arrow-down.svg" width="12px" height="10px"/></div>
+            <div class="faq-content d-none" id="content-${index + 1}">${item.content} </div>
+        </div>`
+    });
+
+    wrapper.innerHTML = faqHtml.join('');
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach( (item,index) => {
+      item.addEventListener('click', () => {
+        document.querySelector(`#content-${index + 1}`).classList.toggle('d-none');
+
+      })
+    })
+
+  </script>
+</body>
+</html>
