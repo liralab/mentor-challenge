@@ -20,7 +20,7 @@ img{
 
 .box-container{
     background-color: #fff;
-    width: 900px;
+    width: 970px;
     margin: auto;
     margin-top: 10rem;
     border-radius: 15px;
@@ -30,6 +30,9 @@ img{
 .row{
     display: flex;
     position: relative;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: -560px -303px;
+    background-repeat: no-repeat;
 }
 .image-area{
     position: relative;
@@ -43,8 +46,9 @@ img{
     background-image: url(./images/illustration-woman-online-desktop.svg);
     background-repeat: no-repeat;
     background-position: left;
-    height: 500px;
-    margin-left: -80px;
+    background-size: 500px;
+    height: 465px;
+    margin-left: -82px;
     z-index: 15;
 }
 .box-image{
@@ -60,8 +64,9 @@ img{
 .faq-area{
     flex-basis: 50%;
     margin-left: 50px;
-    padding-right: 15px;
-    margin-bottom: 30px;
+    padding-right: 90px;
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 .faq-title{
     font-size: 40px;
@@ -69,10 +74,9 @@ img{
     margin-top: 20px;
 }
 .question-col{
-    margin-bottom: 20px;
     position: relative;
     cursor: pointer;
-    padding: 15px 0;
+    padding: 18px 0;
 }
 .question-col::after{
     content: "";
@@ -80,7 +84,7 @@ img{
     width: 100%;
     height: 1px;
     background: hsl(240, 5%, 91%);
-    bottom: -10px;
+    bottom: 7px;
 }
 .question{
     color: hsl(240, 6%, 50%);
@@ -103,7 +107,7 @@ img{
     opacity: 0;
     font-size: 14px;
     color: hsl(240, 6%, 50%);
-    width: 70%;
+    width: 100%;
     margin-top: 5px;
     transition: 0.5s ease-in-out;
 }
@@ -113,7 +117,7 @@ img{
     opacity: 1;
     font-size: 14px;
     color: hsl(240, 6%, 50%);
-    width: 70%;
+    width: 100%;
     margin-top: 5px;
 }
 .arrow-button{
@@ -131,6 +135,9 @@ img{
     }
     .row{
     flex-direction: column;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-size: 330px;
+    background-position: 50% 30%;
     }
     .image-area{
         flex-basis: 100%;
@@ -142,12 +149,14 @@ img{
         flex-basis: 100%;
         margin-left: 0;
         padding-left: 15px;
+        padding-right: 15px;
     }
     .woman-image{
         background-image: url(./images/illustration-woman-online-mobile.svg);
         height: 300px;
         margin-left:0;
         background-position: center;
+        background-size: inherit;
     }
     .box-image{
         display: none;
@@ -163,6 +172,12 @@ img{
     .box-container{
         margin-top: 7rem;
     }
+
+    .row{
+        background-size: 240px;
+        background-position: 50% 10%;
+    }
+
     .image-area{
     overflow: visible;
     }
