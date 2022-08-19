@@ -1,7 +1,7 @@
 export default function Header() {
     return(
         <>
-            header
+          <div className="text-9xl">header</div>
         </>
     )
 };
