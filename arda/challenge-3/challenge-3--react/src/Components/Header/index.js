@@ -1,59 +1,16 @@
 import logo from '../../images/logo.svg';
 import DropDown from "../DropDown";
 import DropDownItem from "../DropDownItem";
-import hamburger from '../../images/icon-menu.svg'
+import { navLinks } from "../../constant";
+import NavigationBar from '../NavigationBar';
+import hamburger from '../../images/icon-menu.svg';
+import {useState} from "react";
 
-const navLinks = [
-    {
-        name: 'features',
-        dropDown: [
-            {
-                name: 'Todo List',
-                url: ''
-            },
-            {
-                name: 'Calendar',
-                url: ''
-            },
-            {
-                name: 'Reminders',
-                url: ''
-            },
-            {
-                name: 'Planning',
-                url: ''
-            }
-        ]
-    },
-    {
-        name: 'Company',
-        dropDown: [
-            {
-                name: 'History',
-                url: ''
-            },
-            {
-                name: 'Our Team',
-                url: ''
-            },
-            {
-                name: 'Blog',
-                url: ''
-            }
-        ]
-    },
-    {
-        name: 'Careers',
-        dropDown: false
-    },
-    {
-        name: 'About',
-        dropDown: false
-    }
-]
+const Header = () => {
+    const [ openDrawer, setOpenDrawer ] = useState( false );
 
-export default function Header() {
     return(
+        <>
         <header className="mx-auto flex p-8 items-center justify-between">
           <div className="flex">
               <img src={logo} className="p-2 mr-20" alt="ardaninsaturnu"/>
@@ -71,7 +28,11 @@ export default function Header() {
               <button className="py-1.5 px-3">Login</button>
               <button className="py-1.5 px-3 border border-gray-700 rounded-xl">Register</button>
           </div>
-          <a className="block md:hidden"><img src={hamburger} /></a>
+          <a onClick={ () => setOpenDrawer(true) }><img src={hamburger}/></a>
         </header>
+        <NavigationBar openDrawer = {openDrawer } setOpenDrawer={setOpenDrawer} />
+    </>
     )
 };
+
+export default Header;
