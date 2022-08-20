@@ -22,7 +22,7 @@ export default function DropDown({ name, children, icon= false, drop = false }) 
               { name }
               { icon && <img src={ arrowIcon } className="w-auto h-2" alt="ardaninsaturnu"/> }
           </span>
-            { drop && <div className={`flex flex-col absolute top-10 bg-red-400 rounded-xl px-5 py-5 mb-0.5 w-[150px] ${dropDown}`}>{ children }</div> }
+            { drop && <div className={`flex flex-col absolute top-10 bg-white border rounded-xl px-5 py-5 mb-0.5 w-[150px] ${dropDown}`}>{ children }</div> }
         </div>
     )
 };
