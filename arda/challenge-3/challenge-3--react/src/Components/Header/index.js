@@ -1,6 +1,7 @@
 import logo from '../../images/logo.svg';
 import DropDown from "../DropDown";
 import DropDownItem from "../DropDownItem";
+import hamburger from '../../images/icon-menu.svg'
 
 const navLinks = [
     {
@@ -53,10 +54,10 @@ const navLinks = [
 
 export default function Header() {
     return(
-        <>
-          <div className="container mx-auto flex p-8 items-center">
+        <header className="mx-auto flex p-8 items-center justify-between">
+          <div className="flex">
               <img src={logo} className="p-2 mr-20" alt="ardaninsaturnu"/>
-              <div className="flex gap-8">
+              <div className="gap-8 hidden md:flex">
                   { navLinks.map( navLink => {
                       return(
                       <DropDown name={ navLink.name } icon={ navLink.dropDown ?? true } drop ={navLink.dropDown ?? true }>
@@ -66,6 +67,11 @@ export default function Header() {
                   })}
               </div>
           </div>
-        </>
+          <div className="md:flex gap-5 hidden">
+              <button className="py-1.5 px-3">Login</button>
+              <button className="py-1.5 px-3 border border-gray-700 rounded-xl">Register</button>
+          </div>
+          <a className="block md:hidden"><img src={hamburger} /></a>
+        </header>
     )
 };
