@@ -1,7 +1,4 @@
 import {navLinks} from "../../constant";
-import DropDown from "../DropDown";
-import DropDownItem from "../DropDownItem";
-import {useState} from "react";
 
 export default function NavigationBar({ openDrawer, setOpenDrawer }) {
     return(
@@ -11,7 +8,7 @@ export default function NavigationBar({ openDrawer, setOpenDrawer }) {
                     return <a className={`${openDrawer ? '' : 'hidden'}`}> {navLink.name}</a>
                 })}
             </div>
-            <div className={`w-full h-full bg-gray-900 opacity-60 absolute z-40 top-0 left-0 ${openDrawer ? '' : 'hidden'}`} onClick={ () => setOpenDrawer(false) }>d</div>
+            <div className={`w-full h-full bg-gray-900 opacity-60 absolute z-40 top-0 left-0 ${openDrawer ? '' : 'hidden'}`} onClick={ () => setOpenDrawer(false) }></div>
         </div>
     )
 };

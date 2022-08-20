@@ -5,6 +5,7 @@ import { navLinks } from "../../constant";
 import NavigationBar from '../NavigationBar';
 import hamburger from '../../images/icon-menu.svg';
 import {useState} from "react";
+import Button from "../Button";
 
 const Header = () => {
     const [ openDrawer, setOpenDrawer ] = useState( false );
@@ -25,8 +26,8 @@ const Header = () => {
               </div>
           </div>
           <div className="md:flex gap-5 hidden">
-              <button className="py-1.5 px-3">Login</button>
-              <button className="py-1.5 px-3 border border-gray-700 rounded-xl">Register</button>
+              <Button className="py-1.5 px-3" content="Login"/>
+              <Button className="py-1.5 px-3 border border-gray-700 rounded-xl" content="Register"/>
           </div>
           <a onClick={ () => setOpenDrawer(true) } className="md:hidden"><img src={hamburger}/></a>
         </header>
