@@ -1,0 +1,183 @@
+@media (min-width:1500px){
+  .text-area-wrapper{
+    padding: 100px 160px 100px 250px !important;
+  }
+  .buttonLearn{
+    margin-bottom: 25% !important;
+  }
+}
+.attribution {
+  position: absolute;
+  bottom:10px;
+  width:100%;
+  font-size: 11px;
+  text-align: center;
+  color:hsl(0, 0%, 41%);
+  z-index: 1;
+  white-space: nowrap;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(0, 0%, 4%);
+  font-size: 12px;
+  transition: all .2s ease-in-out;
+  line-height: 18px;
+}
+.attribution a:hover {
+  font-size:13px;
+  color: hsl(0, 0%, 68%);
+}
+body{
+  margin:0 !important;
+}
+.hoverA{
+  margin-bottom:12px;
+  color:hsl(0, 0%, 41%);
+  width:max-content;
+  display:flex;
+  gap:10px;
+  justify-content:space-between;
+  align-items:center;
+}
+.openable1 {
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+  font-size:13px;
+  position:absolute;
+  top:30px;
+  right:0;
+  background-color:white;
+  border-radius:20px;
+  padding:20px 20px 10px 20px;
+  transition: all .2s ease-in-out;
+}
+.openable1 img{
+  transition: all .2s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+.openable{
+  width:max-content;
+  color:hsl(0, 0%, 41%);
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+  font-size:13px;
+  position:absolute;
+  top:30px;
+  left:0;
+  background-color:white;
+  padding:20px 20px 10px 20px;
+  border-radius:20px;
+  transition: all .2s ease-in-out;
+}
+
+.hoverA:hover{
+  filter:brightness(1.4);
+}
+.openable a, .openable1 a{
+  text-decoration: none;
+  color:hsl(0, 0%, 41%);
+}
+.header-menu{
+  color:hsl(0, 0%, 41%);
+  cursor:pointer;
+}
+.header-menu:hover, .header-menu:active{
+  color:black;
+}
+.imgArea{
+  background-image: url('./images/image-hero-desktop.png');
+  height:calc(90vh - 91px);
+}
+.bottomLogos img{
+  width:100px;
+  height:30px ;
+}
+.header-right button{
+  transition: all .3s ease-in-out;
+}
+.header-right button:hover{
+  color:black !important;
+}
+.buttonLearn button{
+  transition: all .3s ease-in-out;
+}
+.buttonLearn button:hover{
+  background-color: white !important;
+  color: black !important;
+}
+@media (max-width:475px){
+  .mobilehero{
+    display:block !important;
+  }
+  .mobilehero img{
+    width:100vw;
+    height: auto;
+  }
+  .openableMobile{
+    overflow:hidden;
+    z-index:1;
+    padding:0;
+    background-color:white;
+    position:fixed;
+    top:0;
+    right:0;
+    transition:.5s;
+    min-height:100vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .attribution{
+    position: static;
+    background-color: hsl(0, 0%, 98%);
+  }
+  .main-container{
+    flex-direction: column-reverse;
+  }
+  .text-area{
+    width: 100% !important;
+  }
+  .text-area-wrapper{
+    padding:10px !important;
+  }
+  .header-right{
+    display: none !important;
+  }
+  .bottomLogos{
+    gap: 5px !important;
+    justify-content: space-between;
+  }
+  .bottomLogos img{
+    width:20%;
+    height: auto;
+  }
+  .imgArea {
+    background-image: url('./images/image-hero-mobile.png') !important;
+    background-size: fill !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+    max-height: 350px !important;
+  }
+  .padding1{
+    font-size: 36px !important;
+    text-align: center;
+  }
+  .padding2{
+    text-align: center;
+  }
+  .padding1, .padding2{
+    padding-right: 0 !important;
+  }
+  .container{
+    justify-content: space-between !important;
+    max-width: 100% !important;
+  }
+  .mobile-menu{
+    display:block !important;
+  }
+  .buttonLearn{
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom:30px !important;
+  }
+}
