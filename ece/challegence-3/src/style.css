@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 98%);
+}
+
+button {
+    border-style: none;
+    background-color: hsl(0, 0%, 98%);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(95, 93, 93, 0.993);
+    margin: 10px;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav>ul>li {
+    margin-right: 35px;
+}
+
+/* navbardaki register butonu en sağa aldım */
+nav>ul>li:last-child {
+    margin-right: 0;
+}
+
+/* navbardaki login butonunu seçtim */
+nav>ul>li:nth-child(5) {
+    /* nav>ul e display: flex: verdiğim için bu element sağ tarafta kaldı */
+    margin-left: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 25px 0px 55px 0px;
+    padding: 0 15px 0px 10px;
+}
+
+.logo {
+    margin-right: 80px;
+    margin-top: 12px;
+}
+
+.register-btn {
+
+    border: 1px solid hsl(0, 0%, 41%);
+    outline: none;
+    background-color: transparent;
+    border-radius: 13px;
+    padding: 11px 20px;
+    text-align: center;
+
+}
+
+.menu-btn {
+    font-size: 15px;
+    color: hsl(0, 0%, 41%);
+    height: 40px;
+    font-weight: 700;
+    /* margin-right: 35px; */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    position: relative;
+}
+
+.menu-btn:hover {
+    color: black;
+    padding-bottom: 5px;
+    transition-duration: 0.4s;
+}
+
+.register-btn:hover {
+    margin-bottom: 4px;
+    padding-top: 5px;
+}
+
+img .dropdown-btn {
+    cursor: pointer;
+    margin: 2px;
+}
+
+.dropdown>a {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    position: relative;
+}
+
+.dropdown>a:hover {
+    color: black;
+    padding-bottom: 4px;
+    transition-duration: 0.4s;
+}
+
+nav ul li>a.career {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    position: relative;
+}
+
+nav ul li>a.career:hover {
+    color: black;
+    padding-bottom: 4px;
+    transition-duration: 0.4s;
+}
+
+#bold {
+    font-weight: 700;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: -10px;
+    background-color: #fff;
+    padding: 15px;
+    font-size: 17px;
+    color: hsl(0, 0%, 41%);
+    width: 160px;
+    border-radius: 12px;
+    box-shadow: 2px 7px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu[id="Company"] {
+    width: 130px;
+    height: 138px;
+    right: -28px;
+}
+
+.with-icon:hover {
+    background-color: rgb(197, 197, 197);
+}
+
+.dropdown-menu[id="Company"] ul li:hover {
+    background-color: rgb(197, 197, 197);
+}
+
+#lines,
+#close {
+    display: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.remote {
+    padding-left: 35px;
+    margin: 25px 120px 0px 0px;
+}
+
+.remote h1 {
+    font-size: 5rem;
+    margin: 105px 0 45px 0;
+}
+
+.remote p {
+    line-height: 1.8rem;
+    color: hsl(0, 0%, 41%);
+    max-width: 420px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+/* first image */
+.hero-image #img1 {
+    width: 500px;
+    margin: 20px 0px 0px 90px;
+    display: block;
+}
+
+#imgMobileHero {
+    display: none
+}
+
+.learn {
+    width: 160px;
+    height: 55px;
+    color: #fff;
+    background-color: black;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 105px;
+}
+
+.learn:hover {
+    background-color: #fff;
+    color: black;
+    border-style: solid;
+}
+
+.ıcons {
+    display: flex;
+}
+
+.ıcons img {
+    /*  yeniden boyutlandırmadım */
+    object-fit: none;
+    margin-right: 32px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* for mobile */
+/* 320*768 */
+@media screen and (max-width:768px) {
+    body {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    header {
+        margin: 20px auto 25px auto;
+        max-width: 360px;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    #lines {
+        display: block;
+        left: 80%;
+        width: 33px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    #close {
+        left: 85%;
+        width: 30px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    nav>ul {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        width: 240px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: left;
+        transform: translateX(100%);
+        transition: all 1s ease;
+    }
+
+    nav>ul.open-menu {
+        transition: all 1s ease;
+        transform: translateX(0%);
+    }
+    .menu-btn {
+        background-color: white;
+        font-size: inherit;
+    }
+
+    nav>ul>li {
+        margin-right: 95px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    nav>ul>li .career {
+        margin-right: 36px;
+        font-size: 16px;
+    }
+
+    /* features */
+    nav>ul>li:nth-child(1) {
+        margin-top: 70px;
+    }
+
+    .register-btn {
+        width: 195px;
+        border-radius: 15px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        margin-left: 12px;
+        padding: 0;
+    }
+
+    #bold {
+        /* margin-left: 30px; */
+
+    }
+
+    #sol {
+        margin-left: 19px;
+    }
+
+    .dropdown-menu[id="Company"] {
+        width: 100%;
+        height: auto;
+        margin-left: 35px;
+
+    }
+
+    .dropdown-menu ul li {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-menu ul .with-icon a {
+        display: flex;
+        align-items: center;
+    }
+
+    .with-icon {
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 0 auto 80px auto;
+        max-width: 750px;
+    }
+
+    .remote {
+        order: 2;
+        /* flex: 0 0 auto; */
+    }
+
+    .hero-image #img1 {
+        display: none;
+    }
+
+    .hero-image #imgMobileHero {
+        margin: 0px;
+        display: block;
+    }
+
+    .hero-image #imgMobileHero {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .remote {
+        padding: 0;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .remote>h1 {
+        margin: 50px 0 20px 0;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .remote>h1>div {
+        display: inline;
+    }
+
+    .remote>p {
+        text-align: center;
+        margin: 0 20px 30px;
+        font-size: 18px;
+        line-height: 1.5rem;
+        font-weight: 500;
+    }
+
+    .learn {
+        display: block;
+        margin: 0 auto 55px auto;
+        width: 140px;
+        height: 45px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .ıcons {
+        flex-wrap: nowrap;
+    }
+
+    .ıcons>img {
+        object-fit: contain;
+        width: 25%;
+        height: 30px;
+        margin-right: 0;
+        padding: 0 7px;
+    }
+}

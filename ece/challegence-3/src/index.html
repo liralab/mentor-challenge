@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+
+<body>
+      <!-- for desktop -->
+    <header>
+        <img id="close" src="../images/icon-close-menu.svg" alt="mobile">
+        <img id="lines" src="../images/icon-menu.svg" alt="mobile">
+        <img src="../images/logo.svg" class="logo">
+        <nav>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" id="bold sol">Features </a> <img src="../images/icon-arrow-down.svg"
+                            class="dropdown-btn">
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li class="with-icon">
+                                    <a href="#">
+                                        <img src="../images/icon-todo.svg"><span style="margin-left: inherit;"> Todo
+                                            List</span> </a>
+                                </li>
+                                <li class="with-icon"> <a href="#"><img src="../images/icon-calendar.svg"><span
+                                            style="margin-left: inherit;">Calendar</span></a></li>
+                                <li class="with-icon"> <a href="#"><img src="../images/icon-reminders.svg"><span
+                                            style="margin-left: inherit;">Reminders</span></a>
+                                </li>
+                                <li class="with-icon"> <a href="#"><img src="../images/icon-planning.svg"><span
+                                            style="margin-left: inherit;">Planning</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" id="sol"> Company </a> <img src="../images/icon-arrow-down.svg" class="dropdown-btn second">
+                        <div class="dropdown-menu" id="Company">
+                            <ul>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="career" id="sol">Careers</a></li>
+                <li><a href="#" class="career" id="sol">About</a></li>
+
+                <li><button class="menu-btn">Login</button></li>
+                <li><button class="menu-btn register-btn">Register</button></li>
+            </ul>
+
+        </nav>
+        <!-- for mobile -->
+        <div class="mobile-menu"></div>
+    </header>
+
+    <main>
+        <div class="remote">
+            <h1>Make<div> remote work</div>
+            </h1>
+            <p>
+                Get your team in sync, no matter your location. Streamline processes,
+                create team rituals, and watch productivity soar.
+            </p>
+            <button class="learn">Learn more</button>
+            <div class="ıcons">
+                <img src="../images/client-databiz.svg" alt="">
+                <img src="../images/client-audiophile.svg" alt="">
+                <img src="../images/client-meet.svg" alt="">
+                <img src="../images/client-maker.svg" alt="">
+            </div>
+        </div>
+        <div class="hero-image">
+            <picture>
+            <img id="img1" src="../images/image-hero-desktop.png"  media="(min-width: 937px)">
+            <img id="imgMobileHero" src="../images/image-hero-mobile.png" alt="mobile" media="(min-width: 310px)">
+        </picture>
+        </div>
+    </main>
+
+    <script src="app.js">
+    </script>
+</body>
+
+</html>
