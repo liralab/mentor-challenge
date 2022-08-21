@@ -29,7 +29,7 @@ const Header = () => {
               <Button className="py-1.5 px-3" content="Login"/>
               <Button className="py-1.5 px-3 border border-gray-700 rounded-xl" content="Register"/>
           </div>
-          <a onClick={ () => setOpenDrawer(true) } className="md:hidden"><img src={hamburger}/></a>
+          <a onClick={ () => setOpenDrawer(true) } className="md:hidden"><img src={hamburger} alt="ardaninsaturnu"/></a>
         </header>
         <NavigationBar openDrawer = {openDrawer } setOpenDrawer={setOpenDrawer} />
     </>

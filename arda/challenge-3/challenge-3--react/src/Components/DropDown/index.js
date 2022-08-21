@@ -18,7 +18,7 @@ export default function DropDown({ name, children, icon= false, drop = false }) 
                 drop && setDropDown( 'hidden' );
             }}>
           <span
-              className="text-zinc-700 hover:text-black font-medium flex items-center gap-3">
+              className="text-black hover:text-stone-800 font-medium flex items-center gap-3">
               { name }
               { icon && <img src={ arrowIcon } className="w-auto h-2" alt="ardaninsaturnu"/> }
           </span>
