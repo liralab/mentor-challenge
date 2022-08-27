@@ -1,5 +1,4 @@
 import '../styles/base.css'
-import React, { useState } from "react";
 
 import jeremyPic from '../images/image-jeremy.png'
 import workPic from '../images/icon-work.svg'
