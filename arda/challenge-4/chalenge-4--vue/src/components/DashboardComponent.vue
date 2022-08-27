@@ -15,7 +15,9 @@
       </div>
     </div>
     <!-- here is list rendering -->
-    <slot/>
+    <div class="card-grid-wrapper">
+      <slot/>
+    </div>
   </div>
 </template>
 

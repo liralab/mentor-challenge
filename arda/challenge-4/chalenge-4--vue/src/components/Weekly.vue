@@ -1,6 +1,6 @@
 <template>
   <DashboardComponent>
-    <div class="card-grid-wrapper" v-for="( item, index ) in items" :key="index">
+    <div class="card-grid-item" v-for="( item, index ) in items" :key="index">
       <CardComponent
           v-bind="item"
           :cardName="item.name"

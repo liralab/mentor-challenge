@@ -9,7 +9,7 @@
         <span>...</span>
       </div>
       <div class="time-wrapper">
-        {{ recentlyData }}hrs
+        <span :style="{ color: iconWrapColor }">{{ recentlyData }}</span>hrs
       </div>
       <p>Last week - {{ previousData }}hrs</p>
     </div>
