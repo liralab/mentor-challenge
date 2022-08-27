@@ -1,14 +1,13 @@
 <template>
-  <DashboardComponent profile="../assets/image-jeremy.png"/>
+  <router-view/>
 </template>
 
 <script>
-import DashboardComponent from "@/components/DashboardComponent";
 
 export default {
   name: 'App',
   components: {
-    DashboardComponent
+
   }
 }
 </script>

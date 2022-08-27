@@ -1,7 +1,7 @@
 <template>
-  <div class="card-wrapper" :style="{backgroundColor :{{ iconWrapColor }}}">
+  <div class="card-wrapper" :style="{ backgroundColor: iconWrapColor }">
     <div class="icon-wrapper">
-      <img src="{{ imgPath }}">
+      <img :src="require(`@/assets/${imgPath}`)" alt="vue-dashboard">
     </div>
     <div class="data-wrapper">
       <div class="card-header">
@@ -11,7 +11,7 @@
       <div class="time-wrapper">
         {{ recentlyData }}hrs
       </div>
-      <span>Last week - {{ previousData }}hrs</span>
+      <p>Last week - {{ previousData }}hrs</p>
     </div>
   </div>
 </template>
