@@ -11,9 +11,13 @@ import selfcarePic from '../images/icon-self-care.svg'
 
 const Main = ({
   hourCurrrent:[work,play,study,exercise,social,selfcare],
- changeTime, dailyChange, weeklyChange, monthlyChange
+ changeTime, dailyChange, weeklyChange, monthlyChange,
+ dailyActiver, weeklyActiver,monthlyActiver,dailyStat,weeklyStat,monthlyStat
   }) => {
-
+  const dailyStyle = dailyStat ? {color:'white', opacity:'1'}  : {}
+  const weeklyStyle = weeklyStat ? {color:'white', opacity:'1'} : {}
+  const monthlyStyle = monthlyStat ? {color:'white', opacity:'1'} : {}
+  
  return(
     <div className='container'>
       <div className='content-wrapper'>
@@ -32,9 +36,9 @@ const Main = ({
           </div>
           <div className='button-wrapper'>
             <br/>
-            <div><button onClick={dailyChange}>Daily</button></div>
-            <div><button onClick={weeklyChange}>Weekly</button></div>
-            <div><button onClick={monthlyChange}>Monthly</button></div>
+            <div><button style={dailyStyle} onClick={()=> {dailyChange(); dailyActiver();}}>Daily</button></div>
+            <div><button style={weeklyStyle} onClick={()=> {weeklyChange(); weeklyActiver();}}>Weekly</button></div>
+            <div><button style={monthlyStyle} onClick={()=> {monthlyChange(); monthlyActiver();}}>Monthly</button></div>
           </div>
         </div>
 

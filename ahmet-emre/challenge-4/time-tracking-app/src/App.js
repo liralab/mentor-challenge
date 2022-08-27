@@ -8,7 +8,10 @@ class App extends Component{
     hours:[
       [5,7],[1,2],[0,1],[1,1],[1,3],[0,1]
     ] ,
-    changeTime:'Yesterday'
+    changeTime:'Yesterday',
+    daily:true,
+    weekly:false,
+    monthly:false,
   }
   dailyHours = () => {
       let daily = [
@@ -34,18 +37,48 @@ class App extends Component{
         hours : monthly.slice(0), changeTime:'Last Month'
       })
   }
+  dailyActiver = () => {
+    this.setState({
+      daily:true,
+      weekly:false,
+      monthly:false,
+    })
+  }
+  weeklyActiver = () => {
+    this.setState({
+      daily:false,
+      weekly:true,
+      monthly:false,
+    })
+  }
+  monthlyActiver = () => {
+    this.setState({
+      daily:false,
+      weekly:false,
+      monthly:true,
+    })
+  }
   
   render() {
     let hourDisplayer=this.state.hours
     let currentDisplayer = this.state.changeTime
-    
+    let dailyStat = this.state.daily
+    let weeklyStat = this.state.weekly
+    let monthlyStat = this.state.monthly
+
     return(
      <Main
     hourCurrrent={hourDisplayer}
     changeTime={currentDisplayer} 
     dailyChange={this.dailyHours} 
     weeklyChange={this.weeklyHours} 
-    monthlyChange={this.monthlyHours} 
+    monthlyChange={this.monthlyHours}
+    dailyActiver={this.dailyActiver}
+    weeklyActiver={this.weeklyActiver}
+    monthlyActiver={this.monthlyActiver}
+    dailyStat={dailyStat}
+    weeklyStat={weeklyStat}
+    monthlyStat={monthlyStat}
     />
     )
   }
