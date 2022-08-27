@@ -18,6 +18,7 @@ const Main = ({
   const monthlyStyle = monthlyStat ? {color:'white', opacity:'1'} : {}
   
  return(
+  <>
     <div className='container'>
       <div className='content-wrapper'>
 
@@ -35,9 +36,9 @@ const Main = ({
           </div>
           <div className='button-wrapper'>
             <br/>
-            <div><button style={dailyStyle} onClick={()=> {dailyChange(); dailyActiver();}}>Daily</button></div>
-            <div><button style={weeklyStyle} onClick={()=> {weeklyChange(); weeklyActiver();}}>Weekly</button></div>
-            <div><button style={monthlyStyle} onClick={()=> {monthlyChange(); monthlyActiver();}}>Monthly</button></div>
+            <div className='buttonDiv'><button style={dailyStyle} onClick={()=> {dailyChange(); dailyActiver();}}>Daily</button></div>
+            <div className='buttonDiv'><button style={weeklyStyle} onClick={()=> {weeklyChange(); weeklyActiver();}}>Weekly</button></div>
+            <div className='buttonDiv'><button style={monthlyStyle} onClick={()=> {monthlyChange(); monthlyActiver();}}>Monthly</button></div>
           </div>
         </div>
 
@@ -139,6 +140,11 @@ const Main = ({
         </div>
       </div>
     </div>
+    <div className="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor </a>
+      Coded by <a href="https://www.frontendmentor.io/profile/AEmre23" target="_blank">Emre ALTUNKAYA</a>
+    </div>
+    </>
   )
 }
 export default Main

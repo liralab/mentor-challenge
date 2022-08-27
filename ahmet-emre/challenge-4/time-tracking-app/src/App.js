@@ -6,11 +6,11 @@ import Main from '../src/components/Main'
 class App extends Component{
   state={
     hours:[
-      [5,7],[1,2],[0,1],[1,1],[1,3],[0,1]
+      [32,36],[10,8],[4,7],[4,5],[5,10],[2,2]
     ] ,
-    changeTime:'Yesterday',
-    daily:true,
-    weekly:false,
+    changeTime:'Last Week',
+    daily:false,
+    weekly:true,
     monthly:false,
   }
   dailyHours = () => {

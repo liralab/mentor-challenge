@@ -14,6 +14,27 @@
   --desaturated-blue: hsl(235, 45%, 46%);
   --pale-blue: hsl(236, 100%, 87%);
 }
+.attribution {
+  position: absolute;
+  bottom:10px;
+  width:100%;
+  font-size: 11px;
+  text-align: center;
+  color:var(--desaturated-blue);
+  z-index: 1;
+  white-space: nowrap;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(235, 45%, 60%);
+  font-size: 12px;
+  transition: all .2s ease-in-out;
+  line-height: 18px;
+}
+.attribution a:hover {
+  font-size:13px;
+  color: var(--pale-blue)
+}
 body{
   margin:0 !important;
 }
@@ -33,21 +54,23 @@ html{
 }
 .content-wrapper{
   display:flex;
+  gap:20px;
 }
 .content-leftside{
   width: 260px;
+  margin-top: -20px;
 }
 .user-info{
-  background-color: var(--desaturated-blue);
+  background-color: var(--blue);
   border-radius: 15px;
-  padding: 20px 30px 35px 30px;
+  padding: 10px 30px 25px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 3;
   position: relative;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .button-wrapper{
   width: 100%;
@@ -58,7 +81,7 @@ html{
   background-color: var(--dark-blue);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 30px 0 10px 0;
+  padding: 30px 0 2px 0;
   z-index: 2;
   margin-top: -20px;
   position: relative;
@@ -109,6 +132,7 @@ html{
 }
 .content-right{
   display: flex;
+  gap:20px;
 }
 .content-box{
   display:flex;
@@ -118,13 +142,13 @@ html{
   position: relative;
   top:0px;
   left:0;
-  width:280px;
+  width:260px;
   z-index: 1;
 }
 .content-text-container{
   padding:5px 15px;
   position: relative;
-  left:20px;
+  left:0;
   top:-20px;
   width:220px;
   z-index: 2;
@@ -140,8 +164,7 @@ html{
 }
 .svg-area{
   padding:18px 18px 35px 18px;
-  margin:10px;
-  left:10px;
+  left:0;
   position: relative;
   overflow: hidden;
   border-top-left-radius: 15px;
@@ -203,12 +226,16 @@ html{
   .content-wrapper{
     flex-direction: column;
     margin-top: 0;
+    gap:10px;
   }
   .content-right{
     flex-direction: column;
   }
   .user-info{
     flex-direction: row;
+  }
+  .content-right{
+    gap:5px;
   }
   .content-box{
     margin-bottom: 0;
@@ -217,11 +244,11 @@ html{
     max-width: 100%;
   }
   .content-text-container{
-    width:305px;
+    width:310px;
     left:0px;
   }
   .svg-area{
-    left: -10px;
+    left: 0;
   }
   .content-leftside{
     width: 350px;
@@ -229,14 +256,25 @@ html{
     margin-bottom: 10px;
   }
   .svg-wrapper{
-    width: 365px;
+    width: 350px;
   }
   .button-wrapper{
     flex-direction: row;
+    justify-content: center;
     padding-top: 40px;
     padding-bottom: 0;
   }
+  .button-wrapper button{
+    margin:10px 10px 15px;
+  }
   .content-title{
     margin:0;
+  }
+  .attribution {
+    position: static;
+    bottom:10px;
+    color:white;
+    z-index: 4;
+    background-color: var(--very-dark-blue)
   }
 }
