@@ -1,6 +1,6 @@
 .card-wrapper {
-  width: 240px;
-  height: 250px;
+  width: 320px;
+  height: 320px;
   border-radius: 16px;
   position: relative;
   color: white;
@@ -25,7 +25,7 @@
 
   .data-wrapper {
     width: 100%;
-    height: calc( 100% - 40px );
+    height: calc( 100% - 38px );
     border-radius: 16px;
     background-color:hsl(235, 46%, 20%);
     position: absolute;
@@ -38,8 +38,15 @@
     }
 
     .time-wrapper {
-      font-size: 24px;
+      font-size: 40px;
       font-weight: 900;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
     }
   }
 }

@@ -1,15 +1,24 @@
 .dashboard {
   padding: 2rem 4rem;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background-color: hsl(226, 43%, 10%);
+  display: flex;
+  gap: 2rem;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1028px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
 
   .sidebar {
-    width: 240px;
+    width: 400px;
     background-color: hsl(235, 46%, 20%);
     border-radius: 16px;
 
     @media screen and (max-width: 1028px) {
-      width: 90%;
+      width: 100%;
     }
 
     .personal-wrapper {
@@ -51,9 +60,19 @@
 
         * {
           margin: 0.4rem;
+          color: white;
+          text-decoration: none;
         }
       }
-
   }
 
+  .card-grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+    @media screen and (max-width: 1028px)  {
+      flex-direction: column;
+    }
+  }
 }

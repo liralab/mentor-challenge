@@ -10,9 +10,13 @@
       </div>
       <div class="route-wrapper">
         <router-link to="/">Daily</router-link>
-        <router-link to="/weekly">Weekly</router-link>
-        <router-link to="/monthly">Monthly</router-link>
+        <router-link to="/weekly-view">Weekly</router-link>
+        <router-link to="/monthly-view">Monthly</router-link>
       </div>
+    </div>
+    <!-- here is list rendering -->
+    <div class="card-grid-wrapper">
+      <slot/>
     </div>
   </div>
 </template>
