@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac9ecb04-7082-44d3-a06c-080a4c15b1b8" name="Changes" comment="start everytihnig">
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/icon-ellipsis.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/icon-exercise.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/icon-play.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/icon-self-care.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/icon-social.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/icon-study.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/icon-work.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets/image-jeremy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/components/CardComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/styles/card.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +32,7 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -55,25 +70,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ardaninsaturnu/station/playcode&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/ardaninsaturnu/station/playcode/arda/challenge-4/chalenge-4--vue/src/assets",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/arda/challenge-3/challenge-3--react/src" />
       <recent name="$PROJECT_DIR$/arda/challenge-3/challenge-3--react" />
@@ -82,6 +100,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="npm run start" />
+      <command value="npm run serve" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -98,6 +117,8 @@
       <workItem from="1661011453347" duration="16772000" />
       <workItem from="1661085952995" duration="1598000" />
       <workItem from="1661168248873" duration="735000" />
+      <workItem from="1661371353096" duration="1459000" />
+      <workItem from="1661589328703" duration="4703000" />
     </task>
     <task id="LOCAL-00001" summary="start everytihnig">
       <created>1659157419685</created>
