@@ -1,0 +1,59 @@
+.dashboard {
+  padding: 2rem 4rem;
+  height: 100vh;
+  background-color: hsl(226, 43%, 10%);
+
+  .sidebar {
+    width: 240px;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 16px;
+
+    @media screen and (max-width: 1028px) {
+      width: 90%;
+    }
+
+    .personal-wrapper {
+      background-color: hsl(235, 45%, 61%);
+      padding: 2rem;
+      border-radius: 16px;
+
+      .img-wrapper {
+        border-radius: 50%;
+        border: 2px white solid;
+        width: 84px;
+        height: 84px;
+        background-position: center;
+        background-size: cover;
+        margin: 2rem 0;
+      }
+
+      .text-wrapper {
+        color: white;
+        margin-bottom: 4rem;
+
+        p {
+          margin-bottom: 8px;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 3rem;
+        }
+      }
+    }
+
+      .route-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        color: white;
+        font-size: 1.2rem;
+
+        * {
+          margin: 0.4rem;
+        }
+      }
+
+  }
+
+}
