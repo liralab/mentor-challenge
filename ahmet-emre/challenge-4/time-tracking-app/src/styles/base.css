@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+  --blue: hsl(246, 80%, 60%);
+  /* Primary Colors */
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --selfcare: hsl(43, 84%, 65%);
+  /* Neutral Colors */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 46%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+body{
+  margin:0 !important;
+}
+html{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size:18px;
+  color:white;
+}
+.container{
+  min-height: 100vh;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+}
+.content-wrapper{
+  display:flex;
+}
+.content-leftside{
+  width: 260px;
+}
+.user-info{
+  background-color: var(--desaturated-blue);
+  border-radius: 15px;
+  padding: 20px 30px 35px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  margin-top: 10px;
+}
+.button-wrapper{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--dark-blue);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 30px 0 10px 0;
+  z-index: 2;
+  margin-top: -20px;
+  position: relative;
+}
+.button-wrapper button{
+  border:none;
+  color: var(--pale-blue);
+  opacity: 0.5;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.button-wrapper button:hover{
+  color:white;
+  opacity: 1;
+}
+.active button{
+  color:white !important;
+  opacity: 1;
+}
+.user-pp{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.img-container{
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #ffff;
+  width: 90px;
+  height: 90px;
+  margin:15px 0;
+}
+.user-pp img{
+  width: 90px;
+  height: 90px;
+}
+.report-for{
+  font-size:13px;
+  opacity: 0.6;;
+}
+.username{
+  font-size: 42px;
+  padding-bottom: 20px;
+}
+.content-right{
+  display: flex;
+}
+.content-box{
+  display:flex;
+  flex-direction:column;
+}
+.svg-wrapper{
+  position: relative;
+  top:0px;
+  left:0;
+  width:280px;
+  z-index: 1;
+}
+.content-text-container{
+  padding:5px 15px;
+  position: relative;
+  left:20px;
+  top:-20px;
+  width:220px;
+  z-index: 2;
+  background-color: var(--dark-blue);
+  padding:20px;
+  margin:0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.content-text-container:hover {
+  background-color: hsl(235, 46%, 35%);
+}
+.svg-area{
+  padding:18px 18px 35px 18px;
+  margin:10px;
+  left:10px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.svg-area img{
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width:60px;
+  height: 60px;
+}
+.work{
+  background-color: var(--work);
+}
+.play{
+  background-color: var(--play);
+}
+.study{
+  background-color: var(--study);
+}
+.exercise{
+  background-color: var(--exercise);
+}
+.social{
+  background-color: var(--social);
+}
+.selfcare{
+  background-color: var(--selfcare);
+}
+.content-box p{
+  padding:0 10px;
+}
+.content-title{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content-dot{
+  font-size: 32px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: var(--pale-blue);
+  transition: all .2s ease-in-out;
+  opacity: .7;
+}
+.content-dot:hover{
+  color:white;
+  opacity: 1;
+}
+.hour-displayer{
+  font-size: 58px;
+  opacity: .85;
+  font-weight: 300;
+}
+@media (max-width:475px) {
+  .content-wrapper{
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .content-right{
+    flex-direction: column;
+  }
+  .user-info{
+    flex-direction: row;
+  }
+  .content-box{
+    margin-bottom: 0;
+    width:250px;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .content-text-container{
+    width:305px;
+    left:0px;
+  }
+  .svg-area{
+    left: -10px;
+  }
+  .content-leftside{
+    width: 350px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .svg-wrapper{
+    width: 365px;
+  }
+  .button-wrapper{
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+  .content-title{
+    margin:0;
+  }
+}
