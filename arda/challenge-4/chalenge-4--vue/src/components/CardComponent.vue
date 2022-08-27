@@ -1,5 +1,5 @@
 <template>
-  <div class="card-wrapper" style="background-color:{{ iconWrapColor }};">
+  <div class="card-wrapper" :style="{backgroundColor :{{ iconWrapColor }}}">
     <div class="icon-wrapper">
       <img src="{{ imgPath }}">
     </div>
