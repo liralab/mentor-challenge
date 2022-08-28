@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../Styles/style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cards">
+      <!-- Jeremy Robson -->
+      <div class="card-first">
+        <div class="jeremy-about">
+          <div class="img-wrapper">
+            <img
+              src="../images/image-jeremy.png"
+              alt="jeremy-robson"
+              class="jeremy-img"
+            />
+          </div>
+          <div class="text">
+            <span class="Report-for">Report for</span>
+            <p class="user-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <a id="daily" href="#"> Daily<br /></a>
+            </li>
+            <li>
+              <a id="weekly" href="#" class="active"> Weekly <br /></a>
+            </li>
+            <li>
+              <a id="monthly" href="#"> Monthly<br /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      
+        <!-- work card -->
+        <div class="card work">
+          <div class="card-icon">
+            <img src="../images/icon-work.svg" alt="ıcon" />
+          </div>
+          <div class="card-Content">
+            <div class="hobi-title">
+              <h3>Work</h3>
+              <img
+                src="../images/icon-ellipsis.svg"
+                alt="three dot"
+                class="menu-icon"
+              />
+            </div>
+            <div class="timing">
+              <p class="hours"><span>32</span>hrs</p>
+              <p class="last-week">
+                Last <span class="period">Week -</span>
+                <span class="time">36</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- play card -->
+        <div class="card play">
+          <div class="card-icon">
+            <img src="../images/icon-play.svg" alt="ıcon" />
+          </div>
+          <div class="card-Content">
+            <div class="hobi-title">
+              <h3>Play</h3>
+              <img
+                src="../images/icon-ellipsis.svg"
+                alt="three dot"
+                class="menu-icon"
+              />
+            </div>
+            <div class="timing">
+              <p class="hours"><span>10</span>hrs</p>
+              <p class="last-week">
+                Last <span class="period"> Week -</span>
+                <span class="time">8</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- study card-->
+        <div class="card study">
+          <div class="card-icon">
+            <img src="../images/icon-study.svg" alt="ıcon" />
+          </div>
+          <div class="card-Content">
+            <div class="hobi-title">
+              <h3>Study</h3>
+              <img
+                src="../images/icon-ellipsis.svg"
+                alt="three dot"
+                class="menu-icon"
+              />
+            </div>
+            <div class="timing">
+              <p class="hours"><span>4</span>hrs</p>
+              <p class="last-week">
+                Last <span class="period">Week -</span
+                ><span class="time">7</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- exercise card-->
+        <div class="card1 exercise">
+          <div class="card-icon">
+            <img src="../images/icon-exercise.svg" alt="ıcon" />
+          </div>
+          <div class="card-Content">
+            <div class="hobi-title">
+              <h3>Exercise</h3>
+              <img
+                src="../images/icon-ellipsis.svg"
+                alt="three dot"
+                class="menu-icon"
+              />
+            </div>
+            <div class="timing">
+              <p class="hours"><span>4</span>hrs</p>
+              <p class="last-week">
+                Last <span class="period">Week -</span>
+                <span class="time">5</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- social card-->
+        <div class="card2 social">
+          <div class="card-icon">
+            <img src="../images/icon-social.svg" alt="ıcon" />
+          </div>
+          <div class="card-Content">
+            <div class="hobi-title">
+              <h3>Social</h3>
+              <img
+                src="../images/icon-ellipsis.svg"
+                alt="three dot"
+                class="menu-icon"
+              />
+            </div>
+            <div class="timing">
+              <p class="hours"><span>5</span>hrs</p>
+              <p class="last-week">
+                Last <span class="period">Week -</span>
+                <span class="time">10</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- self care card-->
+        <div class="card self-care">
+          <div class="card-icon">
+            <img src="../images/icon-self-care.svg" alt="ıcon" />
+          </div>
+          <div class="card-Content">
+            <div class="hobi-title">
+              <h3>Self Care</h3>
+              <img
+                src="../images/icon-ellipsis.svg"
+                alt="three dot"
+                class="menu-icon"
+              />
+            </div>
+            <div class="timing">
+              <p class="hours"><span>2</span>hrs</p>
+              <p class="last-week">
+                Last <span class="period">Week -</span>
+                <span class="time">2</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+     
+    </section>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Eceeleyn</a>.
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
