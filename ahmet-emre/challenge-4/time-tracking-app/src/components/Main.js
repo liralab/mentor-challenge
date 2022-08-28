@@ -36,9 +36,9 @@ const Main = ({
           </div>
           <div className='button-wrapper'>
             <br/>
-            <div className='buttonDiv'><button style={dailyStyle} onClick={()=> {dailyChange(); dailyActiver();}}>Daily</button></div>
-            <div className='buttonDiv'><button style={weeklyStyle} onClick={()=> {weeklyChange(); weeklyActiver();}}>Weekly</button></div>
-            <div className='buttonDiv'><button style={monthlyStyle} onClick={()=> {monthlyChange(); monthlyActiver();}}>Monthly</button></div>
+            <div className='buttonDiv'><button style={dailyStyle} onClick={dailyChange}>Daily</button></div>
+            <div className='buttonDiv'><button style={weeklyStyle} onClick={weeklyChange}>Weekly</button></div>
+            <div className='buttonDiv'><button style={monthlyStyle} onClick={monthlyChange}>Monthly</button></div>
           </div>
         </div>
 
