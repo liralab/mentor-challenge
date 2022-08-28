@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+/* https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap */
+
+:root {
+  /* for full background */
+  --very-dark-blue: hsl(226, 43%, 10%);
+
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --clr-blue: hsl(246, 80%, 60%);
+
+  /* for work */
+  --clr-light-red: hsl(15, 100%, 70%);
+  /* for play */
+  --clr-soft-blue: hsl(195, 74%, 62%);
+  /* for study */
+  --clr-red: hsl(348, 100%, 68%);
+  /* for exercise */
+  --clr-lime-green: hsl(145, 58%, 55%);
+  /* for social */
+  --clr-violet: hsl(264, 64%, 52%);
+  /* for self care */
+  --clr-orange: hsl(43, 84%, 65%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+html {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  overflow: hidden;
+  font-size: 18px;
+  display: block;
+}
+
+/* all cards */
+.cards {
+  width: 120%;
+  max-width: 95%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  color: #fff;
+  padding: 8%;
+  display: flex;
+  /* flex-wrap: wrap;
+ justify-content: center;  */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+}
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  /* display: inline-block; */
+  line-height: 45px;
+  position: relative;
+  padding: 15px 0px 15px 0px;
+}
+
+.card-content a {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+.active {
+  color: #fff;
+}
+
+/* main card */
+.card-first {
+  width: 100%;
+  max-width: 15%;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 12px;
+  flex-direction: column;
+  display: flex;
+  /* satır içi başlangıç ​​ve bitiş kenar boşlukları*/
+  /* margin-inline: auto; */
+}
+
+.jeremy-about {
+  background-color: hsl(246, 80%, 60%);
+  padding: 8% 0% 20% 13%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.img-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.text {
+  margin-top: 40px;
+  display: block;
+  padding: 0px 0px 20px 0px;
+}
+.text .Report-for {
+  font-size: 12px;
+  color: var(--pale-blue);
+}
+
+.user-name {
+  font-weight: 200;
+  font-size: 40px;
+  margin: auto;
+}
+
+.jeremy-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+ul {
+  list-style-type: none;
+}
+
+/* work card */
+.card {
+  /* margin-block: 2.75rem;
+  margin-inline: auto;  */
+  border-radius: 12px;
+  /* overflow: hidden; */
+  position: relative;
+  width: 100%;
+  max-width: 20%;
+  margin-left: 5%;
+}
+/* colorful field */
+.card-icon {
+  width: 30%;
+  height: 30%;
+  margin-left: auto;
+  margin-right: 5%;
+  overflow: hidden;
+}
+
+.card-icon img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin-top: -14%;
+}
+.card-Content {
+  position: relative;
+  background-color: var(--dark-blue);
+  padding: 10% 10%;
+  border-radius: 12px;
+  margin-top: -10%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card-Content:active {
+  background-color: var(--desaturated-blue);
+}
+.hobi-title,
+.timing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hobi-title {
+  margin-bottom: 8%;
+}
+.timing {
+  display: block;
+}
+.timing .hours {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.timing .last-week {
+  color: var(--pale-blue);
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.work {
+  background-color: var(--clr-light-red);
+  height: 100%;
+}
+.play {
+  background-color: var(--clr-soft-blue);
+  height: 100%;
+}
+.study {
+  background-color: var(--clr-red);
+  height: 100%;
+}
+
+.exercise {
+  background-color: var(--clr-lime-green);
+  height: 100%;
+}
+
+.card1 {
+  /* margin-block: 2.75rem;
+  margin-inline: auto; */
+  border-radius: 12px;
+  /* overflow: hidden; */
+  position: relative;
+  width: 100%;
+  max-width: 20%;
+  margin-left: 18%;
+}
+.exercise > .card-Content {
+  margin-top: -4%;
+}
+
+.exercise > .card-icon {
+  width: 27%;
+  height: 27%;
+}
+
+.exercise > .card-icon img {
+  margin-top: -1%;
+}
+
+.social {
+  background-color: var(--clr-violet);
+  height: 100%;
+}
+
+.self-care {
+  background-color: var(--clr-orange);
+  height: 100%;
+}
+
+.card2 {
+  border-radius: 12px;
+  /* overflow: hidden; */
+  position: relative;
+  width: 100%;
+  max-width: 20%;
+  margin-left: 5%;
+}
+
+.social > .card-Content {
+  margin-top: -16%;
+}
+
+.social > .card-icon {
+  width: 27%;
+  height: 27%;
+}
+
+.social > .card-icon img {
+  margin-top: -20%;
+}
+.self-care > .card-Content {
+  margin-top: -11%;
+}
+
+@media screen and (max-width: 1025px) {
+  .card-first {
+    width: 120%;
+    max-width: 100%;
+    display: table-column;
+    flex-direction: row;
+  }
+
+  .cards {
+    flex-direction: column;
+    left: auto;
+    right: auto;
+    width: 100%;
+    padding: 2%;
+  }
+  body {
+    overflow: auto;
+  }
+  .text {
+    display: block;
+    margin: 0px 0px 0px 20px;
+    padding: 0px 0px 0px 0px;
+  
+
+  }
+  .jeremy-about {
+    background-color: hsl(246, 80%, 60%);
+    width: 100%;
+    align-items: center;
+    padding: 8%;
+    display: flex;
+  }
+
+  .img-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  .user-name {
+    font-weight: 200;
+    font-size: 25px;
+    margin: auto;
+  }
+  .card-content {
+    display: inline;
+  
+  }
+  .card-content ul{
+    padding: 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
