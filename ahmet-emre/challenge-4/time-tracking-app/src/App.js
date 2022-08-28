@@ -6,7 +6,7 @@ import Main from '../src/components/Main'
 class App extends Component{
   state={
     hours:[
-      [32,36],[10,8],[4,7],[4,5],[5,10],[2,2]
+      ["Work",32,36],["Play",10,8],["Study",4,7],["Exercise",4,5],["Social",5,10],["Self Care",2,2]
     ] ,
     changeTime:'Last Week',
     daily:false,
@@ -15,7 +15,7 @@ class App extends Component{
   }
   dailyHours = () => {
       let daily = [
-        [5,7],[1,2],[0,1],[1,1],[1,3],[0,1]
+        ["Work",5,7],["Play",1,2],["Study",0,1],["Exercise",1,1],["Social",1,3],["Self Care",0,1]
       ]
       this.setState({
         hours : daily.slice(0), changeTime:'Yesterday',daily:true, weekly:false,monthly:false,
@@ -23,7 +23,7 @@ class App extends Component{
   }
   weeklyHours = () => {
       let weekly =[
-        [32,36],[10,8],[4,7],[4,5],[5,10],[2,2]
+        ["Work",32,36],["Play",10,8],["Study",4,7],["Exercise",4,5],["Social",5,10],["Self Care",2,2]
       ];
       this.setState({
         hours : weekly.slice(0), changeTime:'Last Week',daily:false, weekly:true,monthly:false,
@@ -31,7 +31,7 @@ class App extends Component{
   }
   monthlyHours = () => {
       let monthly =[
-        [103,128],[23,29],[12,19],[11,18],[21,23],[7,11]
+        ["Work",103,128],["Play",23,29],["Study",12,19],["Exercise",11,18],["Social",21,23],["Self Care",7,11]
       ]
       this.setState({
         hours : monthly.slice(0), changeTime:'Last Month',daily:false, weekly:false,monthly:true,

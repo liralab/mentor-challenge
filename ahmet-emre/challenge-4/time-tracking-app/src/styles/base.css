@@ -252,9 +252,9 @@ html{
   .attribution {
     position: static;
     bottom:10px;
-    color:white;
     z-index: 4;
-    background-color: var(--very-dark-blue)
+    background-color: var(--very-dark-blue);
+    padding-bottom:20px;
   }
   .user-info{
     flex-direction: row;
