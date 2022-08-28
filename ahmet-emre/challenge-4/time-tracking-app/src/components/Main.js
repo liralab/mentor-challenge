@@ -43,7 +43,6 @@ const Main = ({
         </div>
 
         <div className='content-rightside'>
-          <div className='content-right'>
             <div className='content-box'>
               <div className='svg-wrapper'>
                 <div className='svg-area work'>
@@ -89,8 +88,6 @@ const Main = ({
                 <div style={{opacity:'.6', fontSize:'14px'}}>{changeTime} - {study[1]} Hrs </div>
               </div>
             </div>
-          </div>
-          <div className='content-right'>
             <div className='content-box'>
               <div className='svg-wrapper'>
                 <div className='svg-area exercise'>
@@ -136,7 +133,6 @@ const Main = ({
                   <div style={{opacity:'.6', fontSize:'14px'}}>{changeTime} - {selfcare[1]} Hrs </div>
                 </div>
               </div>
-          </div>
         </div>
       </div>
     </div>

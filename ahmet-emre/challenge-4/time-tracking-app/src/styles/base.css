@@ -63,10 +63,26 @@ html{
   flex-direction: column;
   align-items: stretch;
 }
+.content-rightside{
+  display: flex;
+  gap:20px;
+  max-width: 700px;
+  flex-wrap: wrap;
+}
+.content-box{
+  display:flex;
+  flex-direction:column;
+  width:220px;
+}
+@media (max-width:768px){
+  .content-rightside{
+    justify-content: center;
+  }
+}
 .user-info{
   background-color: var(--blue);
   border-radius: 15px;
-  padding: 10px 30px 25px 30px;
+  padding: 10px 30px 45px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,19 +149,11 @@ html{
   font-size: 42px;
   padding-bottom: 20px;
 }
-.content-right{
-  display: flex;
-  gap:20px;
-}
-.content-box{
-  display:flex;
-  flex-direction:column;
-}
 .svg-wrapper{
   position: relative;
   top:0px;
   left:0;
-  width:260px;
+  width:220px;
   z-index: 1;
 }
 .content-text-container{
@@ -153,7 +161,7 @@ html{
   position: relative;
   left:0;
   top:-20px;
-  width:220px;
+
   z-index: 2;
   background-color: var(--dark-blue);
   padding:20px;
@@ -231,14 +239,15 @@ html{
     margin-top: 0;
     gap:10px;
   }
-  .content-right{
+  .content-rightside{
     gap:10px;
     flex-wrap: wrap;
   }
   .content-leftside{
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
     margin-bottom: 10px;
+    margin-left: 25px;
   }
   .attribution {
     position: static;
@@ -250,13 +259,12 @@ html{
   .user-info{
     flex-direction: row;
     gap:20px;
-    margin:4px;
     padding:10px;
   }
   .button-wrapper{
     flex-direction: row;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 35px;
     padding-bottom: 0;
   }
   .user-pp{
@@ -265,36 +273,36 @@ html{
   }
 }
 @media (max-width:475px) {
-
-  .content-right{
+  .content-rightside{
     flex-direction: column;
-  }
-
-  .content-right{
     gap:5px;
+    align-items: center;
+    justify-content: center;
   }
   .content-box{
     margin-bottom: 0;
-    width:250px;
+    width:280px;
     justify-content: center;
     max-width: 100%;
   }
   .content-text-container{
-    width:310px;
+    width:240px;
     left:0px;
   }
   .svg-area{
     left: 0;
   }
   .content-leftside{
-    width: 350px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    width: 300px;
+    margin: 10px 0 10px 0;
   }
   .svg-wrapper{
-    width: 350px;
+    width: 280px;
   }
-
+  .button-wrapper{
+    justify-content: center;
+    width: 300px;
+  }
   .button-wrapper button{
     margin:10px 10px 15px;
   }
