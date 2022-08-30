@@ -1,0 +1,33 @@
+.reset-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.reset-button button{
+  width: 90%;
+  border-radius: 10px;
+  border:none;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+.reset-button button:hover{
+  filter: brightness(1.2);
+  outline:0.3px solid lightcyan;
+}
+.reset-button button:disabled:hover{
+  filter: brightness(1);
+  outline:none;
+  cursor:default;
+}
+.reset-button button:disabled,
+.reset-button button[disabled]{
+  opacity: .2;
+}
+
+@media (max-width:1068px){
+  .reset-button {
+    width: 100%;
+  }
+}

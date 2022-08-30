@@ -1,0 +1,53 @@
+*{
+  font-family: var(--mainfont);
+}
+.calculator-box{
+  display: flex;
+  padding:25px;
+  background-color: white;
+  gap:20px;
+  border-radius: 20px;
+}
+.calculator-leftside{
+  padding: 25px;
+  border-radius: 15px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.calculator-rightside{
+  background-color: var(--very-dark-cyan);
+  color:var(--strong-cyan);
+  padding: 25px;
+  border-radius: 15px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Bill-area, .People-area{
+  position: relative;
+}
+@media (max-width:1068px){
+  .calculator-box{
+    flex-direction: column;
+    padding:0;
+    padding-bottom:10px;
+    gap:0;
+    align-items: center;
+    overflow: hidden;
+  }
+  .calculator-leftside{
+    max-height: 330px;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+  .calculator-rightside{
+    max-height: 250px;
+    width: 280px;
+    padding:10px;
+  }
+}
+
+

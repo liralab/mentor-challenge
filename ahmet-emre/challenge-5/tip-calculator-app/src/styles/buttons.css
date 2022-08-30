@@ -1,0 +1,81 @@
+.buttons button{
+  width: 120px;
+  border-radius:5px ;
+  background-color:var(--very-dark-cyan) ;
+  color:var(--very-light-grayish-cyan);
+  border: none;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+.buttons button:hover{
+  background-color: var(--light-grayish-cyan);
+  color:var(--very-dark-cyan);
+}
+.buttons button:focus{
+  background-color: var(--strong-cyan);
+  color:var(--very-dark-cyan);
+  outline: 1px solid var(--strong-cyan);
+}
+.buttons button:focus:after{
+  background-color: var(--strong-cyan);
+  color:var(--very-dark-cyan);
+  outline: 1px solid var(--strong-cyan);
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+  justify-content: space-around;
+}
+.buttons input{
+  width: 100px;
+  border-radius:5px ;
+  background-color:var(--very-light-grayish-cyan) ;
+  color:var(--very-dark-cyan);
+  border: none;
+  transition: all .1s ease-in-out;
+  font-size: 14px;
+  padding: 0 10px;
+  font-size: 20px;
+  transition: all .2s ease-in-out;
+}
+.buttons input:focus, .buttons input:hover{
+  outline: 1px solid var(--strong-cyan);
+}
+.buttons input::placeholder{
+  color: var(--very-dark-cyan);
+  font-size: 20px;
+  margin-right: 15px;
+}
+.tip-header{
+  font-size: 18px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  color:var(--very-dark-cyan);
+}
+.buttons button:disabled{
+  background-color: var(--strong-cyan);
+  filter: brightness(0.95);
+}
+@media (max-width: 1068px){
+  .buttons button{
+    width: 100px;
+  }
+  .buttons{
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .buttons input{
+    width: 80px;
+    height: 40px;
+  }
+  .buttons input::placeholder{
+    color: var(--very-dark-cyan);
+    font-size: 16px;
+    margin-right: 13px;
+  }
+  .tip-header{
+    margin-left: 90px;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,54 @@
+.Tip-amount, .Total-amount{
+  width: 420px;
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.Tip-area{
+  width: 420px;
+  margin:20px 0;
+}
+.amount-displayer{
+  font-size: 48px;
+}
+.amount-displayer img{
+  width: 20px;
+  height: auto;
+  margin-right: -15px;
+}
+.amountshower{
+  color:white;
+  font-size: 16px;
+  margin-top: 20px;
+  filter: brightness(0.85);
+}
+.amount-sub{
+  color:grey;
+  font-size: 14px;
+  margin-bottom: 10px;
+  filter: brightness(1.1);
+}
+@media (max-width:1068px){
+  .Tip-amount, .Total-amount{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .Tip-area{
+    width: 300px;
+    margin:0;
+  }
+  .amount-displayer{
+    font-size: 28px;
+    margin-top: 15px;
+  }
+  .amount-displayer img{
+    width: 15px;
+    height: auto;
+    margin-right: -10px;
+    margin-top: 5px;
+  }
+}

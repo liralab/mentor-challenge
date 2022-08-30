@@ -1,0 +1,32 @@
+.attribution {
+  position: absolute;
+  bottom:10px;
+  width:100%;
+  font-size: 11px;
+  text-align: center;
+  color:var(--grayish-cyan);
+  z-index: 1;
+  white-space: nowrap;
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--dark-grayish-cyan);
+  font-size: 12px;
+  transition: all .2s ease-in-out;
+  line-height: 18px;
+}
+.attribution a:hover {
+  font-size:13px;
+  color: var(--very-dark-cyan)
+}
+
+@media  (max-width:1068px) {
+  .attribution {
+    position: static;
+    bottom:10px;
+    z-index: 4;
+    background-color: var(--light-grayish-cyan);
+    padding:15px 0;
+    font-size: 8px;
+  }
+}
