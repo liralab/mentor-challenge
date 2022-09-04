@@ -1,8 +1,15 @@
+import Result from './Component/Result';
+import Calculate from "./Component/Calculate";
+
 function App() {
   return (
-    <div className="text-3xl">
-
-    </div>
+      <div className="bg-cyan-100 h-screen flex flex-col justify-center items-center">
+          <h2 className="text-2xl text-gray-600">SPLITTER</h2>
+          <div className="p-5 flex w-3/4 mx-auto bg-white rounded-xl">
+              <Calculate/>
+              <Result/>
+          </div>
+      </div>
   );
 }
 
