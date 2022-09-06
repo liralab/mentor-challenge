@@ -9,10 +9,9 @@ const Calculate = ( { setResult } ) => {
     const [ tip, setTip ] = useState(0 );
     const [ peopleCount, setPeopleCount ] = useState(0);
 
-    function handleSubmit(){
-
-        setResult( ( bill * tip ) / 100 );
-    }
+    useEffect(() => {
+        console.log(bill,tip,peopleCount)
+    },[tip])
 
     return(
         <div className="flex flex-col bg-white w-1/2 p-5">
@@ -21,7 +20,7 @@ const Calculate = ( { setResult } ) => {
             <p className="mb-5">Select Tip %</p>
             <div className="flex flex-wrap gap-2 mb-5">
                 {
-                    values.map( value => <TipButton value={ value } setTip = { setTip } onClick={handleSubmit} /> )
+                    values.map( value => <TipButton value={ value } setTip = { setTip } /> )
                 }
             </div>
         </div>

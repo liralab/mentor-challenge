@@ -13,3 +13,5 @@ const Result = ({ result }) => {
 }
 
 export default Result;
+
+
