@@ -1,11 +1,11 @@
-const TipButton = ({value,setTip }) => {
+const TipButton = ({ tip, setTip }) => {
 
     return(
         <>
         <button
-            onClick={() => setTip(value)}
-            className={`inline py-5 ${typeof value === "number" ? 'bg-teal-900 text-white' : 'bg-cyan-100 text-zinc-600'} w-[120px] text-center`}>
-            { value }{ typeof value === "number" ? '%' : '' }
+            onClick={() => setTip(tip)}
+            className={`inline py-5 ${typeof tip === "number" ? 'bg-teal-900 text-white' : 'bg-cyan-100 text-zinc-600'} w-[120px] text-center`}>
+            { tip }{ typeof tip === "number" ? '%' : '' }
         </button>
         </>
     )
