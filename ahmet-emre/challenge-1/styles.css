@@ -146,7 +146,7 @@ body{
   background-color: white;
   transform: scale(1.03);
 }
-/* -------------------- Result area start -------------------- */
+/* -------------------- ResultInput area start -------------------- */
 .result-image-area{
   display: flex;
   justify-content: center;

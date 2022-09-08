@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9ecb04-7082-44d3-a06c-080a4c15b1b8" name="Changes" comment="start everytihnig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ahmet-emre/challenge-1/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ahmet-emre/challenge-1/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/Calculate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/CalculateInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/CalculateInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/Result.js" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/Result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/TipButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/Component/TipButton.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +22,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="SCSS File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="TypeScript File" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,37 +66,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/ardaninsaturnu/station/playcode/arda/challenge-4/chalenge-4--vue/src/assets",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/ardaninsaturnu/station/playcode/arda/challenge-5/calculator/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ardaninsaturnu/station/playcode/arda/challenge-5/calculator-react&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/ardaninsaturnu/station/playcode/arda/challenge-5/calculator/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/arda/challenge-5/calculator-react" />
+      <recent name="$PROJECT_DIR$/arda/challenge-5/calculator/src" />
       <recent name="$PROJECT_DIR$/arda/challenge-4/chalenge-4--vue/src/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/arda/challenge-5/calculator-react/src/assets" />
+      <recent name="$PROJECT_DIR$/arda/challenge-5/calculator-react/src" />
+      <recent name="$PROJECT_DIR$/arda/challenge-4" />
+      <recent name="$PROJECT_DIR$/arda/challenge-5/calculator" />
       <recent name="$PROJECT_DIR$/arda/challenge-3/challenge-3--react/src" />
-      <recent name="$PROJECT_DIR$/arda/challenge-3/challenge-3--react" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="npm run start" />
       <command value="npm run serve" />
+      <command value="npm run saturn" />
+      <command value="npm run start" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -108,6 +123,9 @@
       <workItem from="1661589328703" duration="17708000" />
       <workItem from="1661619008029" duration="5489000" />
       <workItem from="1662057309369" duration="2433000" />
+      <workItem from="1662143255661" duration="18385000" />
+      <workItem from="1662356420292" duration="11000" />
+      <workItem from="1662400597975" duration="15546000" />
     </task>
     <task id="LOCAL-00001" summary="start everytihnig">
       <created>1659157419685</created>
