@@ -1,4 +1,5 @@
 const ResultInput = ({ content, group, amount }) => {
+    console.log('this is for what')
     return(
         <div className="flex justify-between px-10 py-5">
             <div>
