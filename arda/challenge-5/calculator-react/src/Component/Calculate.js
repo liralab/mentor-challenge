@@ -3,14 +3,32 @@ import TipButton from "./TipButton";
 import {useEffect, useState} from "react";
 
 const values = [5,10,15,25,50, 'Custom'];
-const Calculate = ( { setResult } ) => {
+const Calculate = ( { setResult, setTotalTip } ) => {
     const [ bill, setBill ] = useState(0);
     const [ tip, setTip ] = useState(0 );
     const [ peopleCount, setPeopleCount ] = useState(0);
 
     useEffect(() => {
-        setResult( bill + tip )
-    },[ tip, bill ])
+        calculateTip( tip, peopleCount, bill )
+        if( !bill ) {
+            setTotalTip(0)
+        }
+    },[ tip, bill, peopleCount ])
+
+    const calculateTip = ( tip, person, bill ) => {
+        let newTip = Number(tip)
+        let newPerson = Number( person )
+        let newBill = Number(bill)
+
+        if(bill && !person ) {
+            let tipRate = (newBill * newTip) / 100
+            setTotalTip( tipRate )
+        } else if( bill && person ) {
+            let tipRate = (newBill * newTip) / 100
+            let totalTip = tipRate * newPerson
+            setTotalTip(totalTip)
+        }
+    }
 
     return(
         <div className="flex flex-col bg-white w-1/2 p-5">
@@ -19,11 +37,11 @@ const Calculate = ( { setResult } ) => {
             <p className="mb-5">Select Tip %</p>
             <div className="flex flex-wrap gap-2 mb-5">
                 {
-                    values.map( tip => <TipButton tip={ tip } setTip = { setTip } /> )
+                    values.map( (tip,index) => <TipButton tip={ tip } setTip = { setTip } key ={index} /> )
                 }
             </div>
         </div>
-        <CalculateInput value={peopleCount} setValue={setPeopleCount} name="people" label="Number of people"/>
+        <CalculateInput value={peopleCount} setValue={setPeopleCount} name="people" label="Number of people" tip={tip}/>
         </div>
     )
 }
