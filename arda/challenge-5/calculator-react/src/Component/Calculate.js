@@ -11,22 +11,25 @@ const Calculate = ( { setResult, setTotalTip } ) => {
     const [ peopleCount, setPeopleCount ] = useState(0);
 
     useEffect(() => {
-        calculateTip( tip, peopleCount, bill )
-        calculateBill( totalTip, bill )
+        calculateTip( tip, peopleCount, bill );
+        calculateBill( totalTip, bill );
+
         if( !bill ) {
-            setTotalTip(0 );
+            setTotalTip( 0 );
             setResult( 0 );
         }
-    },[ tip, bill, peopleCount, totalTip ])
+
+    },[ tip, bill, peopleCount, totalTip ]);
 
     const calculateTip = ( tip, person, bill ) => {
-        let newTip = Number(tip)
-        let newPerson = Number( person )
-        let newBill = Number(bill )
+        let newTip = Number(tip);
+        let newPerson = Number( person );
+        let newBill = Number(bill );
 
         if(bill && !person ) {
             let tipRate = (newBill * newTip) / 100
             setTotalTip( tipRate )
+
         } else if( bill && person ) {
             let tipRate = (newBill * newTip) / 100
             setTipTotal( tipRate * newPerson )
@@ -37,24 +40,24 @@ const Calculate = ( { setResult, setTotalTip } ) => {
     const calculateBill = ( totalTip, bill ) => {
         const newBill = Number( bill );
         if( bill ) {
-        setResult( (totalTip + newBill) * peopleCount );
+        setResult( ( totalTip + newBill ) * peopleCount );
         } else {
-            setResult(0)
+            setResult( 0 )
         }
     }
 
     return(
         <div className="flex flex-col bg-white w-1/2 p-5">
-        <CalculateInput value={bill} setValue={setBill} name="bill" label="bill" tip={tip} />
+        <CalculateInput value={ bill } setValue={ setBill } name="bill" label="bill" tip={ tip } />
         <div>
             <p className="mb-5">Select Tip %</p>
             <div className="flex flex-wrap gap-2 mb-5">
                 {
-                    values.map( (tip,index) => <TipButton tip={ tip } setTip = { setTip } key ={index} /> )
+                    values.map( ( tip,index) => <TipButton tip={ tip } setTip = { setTip } key ={ index } /> )
                 }
             </div>
         </div>
-        <CalculateInput value={peopleCount} setValue={setPeopleCount} name="people" label="Number of people" tip={tip}/>
+        <CalculateInput value={ peopleCount } setValue={ setPeopleCount } name="people" label="Number of people" tip={ tip }/>
         </div>
     )
 }
