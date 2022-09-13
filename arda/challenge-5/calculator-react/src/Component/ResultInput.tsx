@@ -1,4 +1,10 @@
-const ResultInput = ({ content, group, amount }) => {
+type Props = {
+    content?: string,
+    group?: string,
+    amount? : number
+}
+
+const ResultInput = ({ content, group, amount } : Props ) => {
 
     return(
         <div className="flex justify-between px-10 py-5">
