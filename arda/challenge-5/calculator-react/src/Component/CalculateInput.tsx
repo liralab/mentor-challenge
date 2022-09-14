@@ -2,7 +2,7 @@ type Props = {
     value?: number,
     label: string,
     setValue: ( value: number ) => void,
-    result: number,
+    result?: number,
     setResult: ( result: number ) => void,
     name: string
 }

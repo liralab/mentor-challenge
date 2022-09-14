@@ -1,6 +1,13 @@
 import ResultInput from "./ResultInput";
 
-const Result = ({ result, totalTip, setResult, setTotalTip }) => {
+type Props = {
+    result: number,
+    totalTip: number,
+    setResult: ( result: number ) => void,
+    setTotalTip: ( totalTip: number ) => void
+}
+
+const Result = ({ result, totalTip, setResult, setTotalTip } : Props ) => {
     const resetAll = () => {
         setResult( 0 );
         setTotalTip( 0 );
