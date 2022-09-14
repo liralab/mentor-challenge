@@ -17,7 +17,7 @@ const Calculate = ( { setResult, setTotalTip } : Props ) => {
 
     useEffect(() => {
         calculateTip( tip, peopleCount, bill );
-        calculateBill( totalTip, bill );
+        calculateBill( totalTip, bill, peopleCount );
 
         if( !bill ) {
             setTotalTip( 0 );
@@ -39,7 +39,7 @@ const Calculate = ( { setResult, setTotalTip } : Props ) => {
         }
     }
 
-    const calculateBill = ( totalTip : number, bill: number ) => {
+    const calculateBill = ( totalTip : number, bill: number, person: number ) => {
         if( bill ) {
         setResult( ( totalTip + bill ) * peopleCount );
         } else {
@@ -49,16 +49,16 @@ const Calculate = ( { setResult, setTotalTip } : Props ) => {
 
     return(
         <div className="flex flex-col bg-white w-1/2 p-5">
-            <CalculateInput value={ bill } setValue={ setBill } name="bill" label="bill" setResult={ setResult }/>
+            <CalculateInput value={ bill } setValue={ setBill } name="bill" label="bill" setResult={ setResult } setTotalTip={ setTotalTip }/>
             <div>
                 <p className="mb-5">Select Tip %</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                     {
-                        values.map( ( tip, index) => <TipButton tip={ Number(tip) } setTip = { setTip } key ={ index } /> )
+                        values.map( ( tip, index) => <TipButton tip={ tip } setTip = { setTip } key ={ index } /> )
                     }
                 </div>
             </div>
-            <CalculateInput value={ peopleCount } setValue={ setPeopleCount } name="people" label="Number of people" setResult={ setResult }/>
+            <CalculateInput value={ peopleCount } setValue={ setPeopleCount } name="people" label="Number of people" setResult={ setResult } setTotalTip={ setTipTotal } tip={ totalTip }/>
         </div>
     )
 }

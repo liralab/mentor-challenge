@@ -1,7 +1,7 @@
 import React from 'react';
 
 type Props = {
-  tip?: number,
+  tip?: any,
   setTip: ( tip: number ) => void;
 }
 
