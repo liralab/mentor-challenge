@@ -3,13 +3,12 @@ type Props = {
     label: string,
     setValue: ( value: number ) => void,
     result?: number,
-    setResult: ( result: number ) => void,
-    setTotalTip: ( tip: number ) => void,
     name: string,
-    tip?: number
+    tip?: number,
+    setResult: ( result : number ) => void
 }
 
-const CalculateInput = ({ value, label, name, setValue, result, setResult, setTotalTip, tip } : Props ) => {
+const CalculateInput = ({ value, label, name, setValue, result, setResult } : Props ) => {
 
     return(
         <div className="flex flex-col mb-5">
@@ -22,7 +21,6 @@ const CalculateInput = ({ value, label, name, setValue, result, setResult, setTo
              onInput={ e => {
              setValue( Number(( e.target as HTMLInputElement).value ))
              result === 0 && setResult( Number(( e.target as HTMLInputElement ).value ))
-             setTotalTip( Number(( e.target as HTMLInputElement ).value ))
          }}/>
         </div>
     )

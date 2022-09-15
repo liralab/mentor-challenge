@@ -4,12 +4,13 @@ import {useEffect, useState} from "react";
 
 type Props = {
     setResult: ( item: number ) => void,
-    setTotalTip: ( item: number ) => void
+    setTotalTip: ( item: number ) => void,
+    result: number
 }
 
 const values = [5,10,15,25,50, 'Custom'];
 
-const Calculate = ( { setResult, setTotalTip } : Props ) => {
+const Calculate = ( { setResult, setTotalTip, result } : Props ) => {
     const [ totalTip, setTipTotal ] = useState(0);
     const [ bill, setBill ] = useState(0);
     const [ tip, setTip ] = useState(0 );
@@ -17,7 +18,7 @@ const Calculate = ( { setResult, setTotalTip } : Props ) => {
 
     useEffect(() => {
         calculateTip( tip, peopleCount, bill );
-        calculateBill( totalTip, bill, peopleCount );
+        calculateBill( totalTip, bill );
 
         if( !bill ) {
             setTotalTip( 0 );
@@ -26,22 +27,22 @@ const Calculate = ( { setResult, setTotalTip } : Props ) => {
 
     },[ tip, bill, peopleCount, totalTip ]);
 
-    const calculateTip = ( tip: number, person: number, bill:number ) => {
+    const calculateTip = ( tip: number, peopleCount: number, bill:number ) => {
 
-        if( bill && !person ) {
+        if( bill && !peopleCount ) {
             let tipRate = ( bill * tip ) / 100
             setTotalTip( tipRate )
 
-        } else if( bill && person ) {
+        } else if( bill && peopleCount ) {
             let tipRate = ( bill * tip ) / 100
-            setTipTotal( tipRate * person )
-            setTotalTip( tip )
+            setTipTotal( tipRate * peopleCount )
+            setTotalTip( totalTip )
         }
     }
 
-    const calculateBill = ( totalTip : number, bill: number, person: number ) => {
+    const calculateBill = ( totalTip : number, bill: number ) => {
         if( bill ) {
-        setResult( ( totalTip + bill ) * peopleCount );
+        setResult( totalTip + ( bill  * peopleCount ));
         } else {
             setResult( 0 )
         }
@@ -49,7 +50,7 @@ const Calculate = ( { setResult, setTotalTip } : Props ) => {
 
     return(
         <div className="flex flex-col bg-white w-1/2 p-5">
-            <CalculateInput value={ bill } setValue={ setBill } name="bill" label="bill" setResult={ setResult } setTotalTip={ setTotalTip }/>
+            <CalculateInput value={ bill } setValue={ setBill } name="bill" label="bill" setResult={setResult} result={result} />
             <div>
                 <p className="mb-5">Select Tip %</p>
                 <div className="flex flex-wrap gap-2 mb-5">
@@ -58,7 +59,7 @@ const Calculate = ( { setResult, setTotalTip } : Props ) => {
                     }
                 </div>
             </div>
-            <CalculateInput value={ peopleCount } setValue={ setPeopleCount } name="people" label="Number of people" setResult={ setResult } setTotalTip={ setTipTotal } tip={ totalTip }/>
+            <CalculateInput value={ peopleCount } setValue={ setPeopleCount } name="people" label="Number of people" tip={tip} result={result} setResult={setResult}/>
         </div>
     )
 }
